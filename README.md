@@ -1,11 +1,11 @@
-# 🧩 Basic x86 Compiler
+# Basic x86 Compiler
 
 A simple **C-to-x86 compiler** built using **Flex** and **Bison**.  
 The compiler parses C source code, generates **Three Address Code (TAC)**, and then converts the TAC to **x86 assembly**.
 
 ---
 
-## ⚙️ Overview
+## Overview
 
 This project demonstrates the basic steps of a compiler:
 
@@ -20,7 +20,7 @@ There are two compiler stages, each implemented using separate Flex-Bison files:
 
 ---
 
-## 🏗️ Project Structure
+## Project Structure
 ```text
 ├── get_TAC/ # Flex and Bison files for TAC generation
 ├── get_x86_assembly/ # Flex and Bison files for x86 code generation
@@ -31,9 +31,9 @@ There are two compiler stages, each implemented using separate Flex-Bison files:
 
 ---
 
-## 🚀 Usage
+## Usage
 
-### 1️⃣ Build the compiler
+### Build the compiler
 ```bash
 make
 ```
@@ -44,37 +44,37 @@ This will create two executables:
 
 **my_compiler** — generates x86 assembly from TAC
 
-### 2️⃣ Generate TAC from C code
+### Generate TAC from C code
 ```bash
 ./get_TAC < input.c > temp_intermediate_TAC.txt
 ```
 
-### 3️⃣ Generate x86 Assembly from TAC
+### Generate x86 Assembly from TAC
 ```bash
 ./my_compiler < temp_intermediate_TAC.txt > out.s
 ```
 
-### 4️⃣ Compile and Run the Assembly
+### Compile and Run the Assembly
 ```bash
 gcc -m32 -no-pie out.s -o output
 ./output
 ```
 
-### ⚡ One-Command Automation
+### One-Command Automation
 
 All the above steps are automated with:
 ```bash
 ./run.sh input.c
 ```
 
-## 🧰 Prerequisites
+## Prerequisites
 
 Make sure the following are installed:
 ```bash
 sudo apt install binutils gcc-multilib
 ```
 
-### 🧪 Example
+### Example
 ```bash
 # Example C file: input.c
 int main() {
@@ -90,6 +90,6 @@ int main() {
 # Executable binary: output
 ```
 
-## 👨‍💻 Author
+## Author
 
 Prince Garg
